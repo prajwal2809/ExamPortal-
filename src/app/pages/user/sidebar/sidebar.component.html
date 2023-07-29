@@ -1,0 +1,21 @@
+<mat-card class="sidebar mt20">
+    <mat-list >
+    <mat-action-list>
+        <div mat-subheader class="mr20 ml20  text-center">Available Categories</div>
+        <button mat-list-item [routerLink]="'/user-dashboard/0'" ><mat-icon mat-list-icon>category</mat-icon>All quizzes</button>
+
+        <button  [routerLink]="'/user-dashboard/'+ c.cid" *ngFor="let c of categories"
+        ><mat-icon mat-list-icon>category</mat-icon> {{c.title }}</button>
+        <!-- <button mat-list-item 
+        ><mat-icon mat-list-icon>list</mat-icon> Dancing </button>
+        <button mat-list-item 
+        ><mat-icon mat-list-icon>add_circle_outline</mat-icon> Singing</button> -->
+        <!-- <button mat-list-item routerLink="/admin/quizzes"
+        ><mat-icon mat-list-icon>quiz</mat-icon>Quizess</button>
+        <button mat-list-item routerLink="/admin/add-quiz"
+        ><mat-icon mat-list-icon>add</mat-icon>Add Quiz</button>
+        <button mat-list-item routerLink="/login"
+        ><mat-icon mat-list-icon>logout</mat-icon>Logout</button> -->
+    </mat-action-list>
+    </mat-list>
+</mat-card>
